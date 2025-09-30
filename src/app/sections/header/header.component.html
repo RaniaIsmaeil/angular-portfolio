@@ -1,0 +1,28 @@
+<header
+  class="sticky top-0 z-50 bg-white/70 dark:bg-zinc-950/50 backdrop-blur border-b border-zinc-200/60 dark:border-zinc-800/60"
+>
+  <div class="container-p flex items-center justify-between h-16">
+    <a href="#home" class="font-semibold text-lg"
+      >Rania<span class="text-brand">.dev</span></a
+    >
+    <nav class="hidden md:flex items-center gap-6">
+      <a class="hover:opacity-80" href="#projects">Projects</a>
+      <a class="hover:opacity-80" href="#skills">Skills</a>
+      <a class="hover:opacity-80" href="#experience">Experience</a>
+      <a class="hover:opacity-80" href="#contact">Contact</a>
+      <button type="button" class="chip" (click)="toggleTheme()">
+        <span *ngIf="!dark"><i class="pi pi-moon"></i></span>
+        <span *ngIf="dark"><i class="pi pi-sun"></i></span>
+        <span>{{ dark ? "Light" : "Dark" }}</span>
+      </button>
+    </nav>
+    <button
+      class="md:hidden chip"
+      (click)="toggleTheme()"
+      aria-label="Toggle theme"
+    >
+      <span *ngIf="!dark"><i class="pi pi-moon"></i></span
+      ><span *ngIf="dark"><i class="pi pi-sun"></i></span>
+    </button>
+  </div>
+</header>

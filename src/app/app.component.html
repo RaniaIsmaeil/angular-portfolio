@@ -1,0 +1,16 @@
+<app-header [dark]="dark" [toggleTheme]="toggleTheme.bind(this)"></app-header>
+<main id="home" class="container-p">
+  <app-hero></app-hero>
+
+  <app-projects></app-projects>
+
+  <app-skills></app-skills>
+
+  <app-experience></app-experience>
+
+  <app-contact></app-contact>
+
+  <footer class="py-10 text-center text-sm text-zinc-500">
+    © {{ year }} Rania Ismail. Built with Angular & Tailwind.
+  </footer>
+</main>

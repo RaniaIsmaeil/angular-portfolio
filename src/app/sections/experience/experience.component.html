@@ -1,0 +1,63 @@
+<section
+  id="experience"
+  class="container-p"
+  observeInView
+  (inView)="expIn = true"
+  [@fadeUp]="expIn ? 'in' : 'out'"
+>
+  <h2 class="text-3xl font-bold text-center mb-2">
+    Experience <span class="text-brand">& Education</span>
+  </h2>
+  <p class="text-center text-zinc-600 dark:text-zinc-300 mb-10">
+    A timeline of my career, education, and hands-on training.
+  </p>
+
+  <div class="relative border-l-2 border-gradient-blue-purple ml-5">
+    <div
+      *ngFor="let item of timeline; let i = index"
+      class="mb-10 ml-6 relative"
+    >
+      <!-- Dot -->
+      <span
+        class="absolute -left-3 top-1.5 w-5 h-5 rounded-full border-2 border-white"
+        [ngClass]="
+          item.type === 'work'
+            ? 'bg-blue-500'
+            : item.type === 'edu'
+            ? 'bg-purple-500'
+            : 'bg-green-500'
+        "
+      ></span>
+
+      <!-- Card -->
+      <div
+        class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 shadow-sm"
+      >
+        <div class="flex items-center justify-between mb-1">
+          <span class="text-sm font-medium chip bg-zinc-100 dark:bg-zinc-800">
+            {{ item.date }}
+          </span>
+          <mat-icon *ngIf="item.type === 'work'" class="text-blue-500"
+            >work</mat-icon
+          >
+          <mat-icon *ngIf="item.type === 'edu'" class="text-purple-500"
+            >school</mat-icon
+          >
+          <mat-icon *ngIf="item.type === 'cert'" class="text-green-500"
+            >badge</mat-icon
+          >
+        </div>
+
+        <h3 class="font-semibold text-base">{{ item.title }}</h3>
+        <p class="text-sm text-zinc-600 dark:text-zinc-300 italic mb-1">
+          {{ item.subtitle }}
+        </p>
+        <ul
+          class="text-sm text-zinc-600 dark:text-zinc-300 list-disc pl-5 mt-2 space-y-1"
+        >
+          <li *ngFor="let d of item.details">{{ d }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

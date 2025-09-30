@@ -1,0 +1,45 @@
+<section
+  class="grid md:grid-cols-2 gap-8 items-center"
+  observeInView
+  (inView)="heroIn = true"
+  [@fadeUp]="heroIn ? 'in' : 'out'"
+>
+  <div>
+    <p class="chip mb-4">Frontend Developer</p>
+    <h1
+      class="text-3xl md:text-4xl font-extrabold leading-tight tracking-tight"
+    >
+      Hi, I'm Rania. I build clean, fast & accessible UIs.
+    </h1>
+    <p class="mt-4 text-zinc-600 dark:text-zinc-300">
+      Skilled in Angular, React, and Vue. Passionate about creating scalable
+      apps that feel great to use.
+    </p>
+
+    <div class="mt-6 flex flex-wrap gap-3">
+      <a class="btn-primary" href="#projects">View My Work</a>
+      <a class="btn-outline" href="#contact">Get In Touch</a>
+    </div>
+  </div>
+  <div class="card">
+    <h3 class="text-xl font-semibold mb-2">What I Do</h3>
+    <ul class="space-y-2">
+      <li class="flex items-center gap-2">
+        <mat-icon class="text-brand">rocket_launch</mat-icon>
+        Build responsive web apps with Angular, React & Vue
+      </li>
+      <li class="flex items-center gap-2">
+        <mat-icon class="text-emerald-500">speed</mat-icon>
+        Focus on performance & accessibility
+      </li>
+      <li class="flex items-center gap-2">
+        <mat-icon class="text-indigo-500">groups</mat-icon>
+        Collaborate with teams to ship features fast
+      </li>
+      <li class="flex items-center gap-2">
+        <mat-icon class="text-rose-500">school</mat-icon>
+        Keep learning & sharing knowledge
+      </li>
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,68 @@
+<section
+  id="contact"
+  class="container-p"
+  observeInView
+  (inView)="contactIn = true"
+  [@fadeUp]="contactIn ? 'in' : 'out'"
+>
+  <h2 class="text-3xl font-bold text-center mb-2">
+    <span class="text-brand">Let's Connect</span>
+  </h2>
+  <p class="text-center text-zinc-600 dark:text-zinc-300 mb-10">
+    Reach out for opportunities or just to say hi!
+  </p>
+
+  <div class="card max-w-md mx-auto">
+    <!-- Email -->
+    <div
+      class="flex items-center gap-3 p-3 rounded-lg bg-zinc-100 dark:bg-zinc-800 mb-3"
+    >
+      <mat-icon class="text-blue-500">mail</mat-icon>
+      <span>ranyasmael&#64;gmail.com</span>
+    </div>
+
+    <!-- Location -->
+    <div
+      class="flex items-center gap-3 p-3 rounded-lg bg-zinc-100 dark:bg-zinc-800 mb-4"
+    >
+      <mat-icon class="text-green-500">location_on</mat-icon>
+      <span>Beirut, Lebanon</span>
+    </div>
+
+    <hr class="my-4 border-zinc-300 dark:border-zinc-700" />
+
+    <!-- Social Icons -->
+    <p class="text-sm font-medium mb-2 text-zinc-600 dark:text-zinc-400">
+      Follow Me
+    </p>
+    <div class="flex gap-3">
+      <a
+        href="https://github.com/"
+        target="_blank"
+        rel="noopener"
+        class="w-9 h-9 flex items-center justify-center rounded-md border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition"
+        aria-label="GitHub"
+      >
+        <i class="pi pi-github"></i>
+      </a>
+
+      <a
+        href="http://www.linkedin.com/in/raniaismaeil"
+        target="_blank"
+        rel="noopener"
+        class="w-9 h-9 flex items-center justify-center rounded-md border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition"
+        aria-label="LinkedIn"
+      >
+        <i class="pi pi-linkedin"></i>
+      </a>
+
+      <a
+        href="mailto:ranyasmael@gmail.com"
+        class="w-9 h-9 flex items-center justify-center rounded-md border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition"
+        aria-label="Email"
+      >
+        <i class="pi pi-envelope"></i>
+      </a>
+    </div>
+  </div>
+</section>
