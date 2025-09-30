@@ -46,7 +46,7 @@ export class ProjectsComponent {
       image: "assets/images/movies-hub.png",
     },
     {
-      title: "Artisanal Coffee (Vue)",
+      title: "Roast & Bloom (Vue)",
       description:
         "Storefront prototype with Vue 3 + Pinia, product filters, and cart basics.",
       tech: ["Vue 3", "Pinia", "Vite"],
