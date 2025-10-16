@@ -55,6 +55,15 @@ export class ProjectsComponent {
       image: "assets/images/vue-coffee.png",
     },
     {
+      title: "Auth Flow SPA (React + Auth0)",
+      description:
+        "Modern authentication demo with Auth0 Universal Login, protected routes, and responsive glassy UI, deployed on Vercel.",
+      tech: ["React", "Auth0", "Vite", "Tailwind"],
+      link: "https://react-auth-spa.vercel.app/",
+      repo: "https://github.com/RaniaIsmaeil/react-auth-spa",
+      image: "assets/images/react-auth-spa.png",
+    },
+    {
       title: "Portfolio (Angular)",
       description:
         "This portfolio was built using Angular standalone components and Tailwind, with animations and dark/light toggle.",

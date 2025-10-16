@@ -15,8 +15,12 @@
 
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
     <article
-      *ngFor="let p of projects"
+      *ngFor="let p of projects; let i = index"
       class="rounded-xl overflow-hidden shadow-md bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 transition hover:-translate-y-1 hover:shadow-lg"
+      [ngClass]="{
+        'hover:shadow-indigo-200 dark:hover:shadow-indigo-900/40':
+          i === projects.length - 1
+      }"
     >
       <img [src]="p.image" [alt]="p.title" class="w-full h-40 object-cover" />
 
