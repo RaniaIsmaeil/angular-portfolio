@@ -26,16 +26,21 @@ export class SkillsComponent {
   skillsIn = false;
 
   skills = [
-    { name: "React", level: 95, color: "#3B82F6" }, // blue-500
-    { name: "Angular", level: 90, color: "#D32F2F" }, // red-700
-    { name: "Vue.js", level: 88, color: "#42B883" }, // vue green
+    { name: "Angular", level: 80, color: "#D32F2F" },
+    { name: "React", level: 90, color: "#3B82F6" },
+    { name: "Vue.js", level: 60, color: "#42B883" },
 
     { name: "TypeScript", level: 90, color: "#1976D2" },
     { name: "JavaScript (ES6+)", level: 95, color: "#F59E0B" },
+    { name: "HTML / CSS", level: 95, color: "#E34F26" },
 
-    { name: "Linux Server Management", level: 85, color: "#4B5563" },
+    { name: "Tailwind CSS", level: 80, color: "#06B6D4" },
+    { name: "PrimeNg", level: 80, color: "#DD0031" },
+    { name: "Figma", level: 80, color: "#A259FF" },
+
     { name: "Git / GitHub", level: 90, color: "#A855F7" },
     { name: "REST APIs", level: 85, color: "#EC4899" },
-    { name: "Agile / Scrum / ClickUp / Trello", level: 88, color: "#10B981" },
+    { name: "Power Pages / Dataverse", level: 50, color: "#742774" },
+    { name: "Agile / Scrum", level: 88, color: "#10B981" },
   ];
 }

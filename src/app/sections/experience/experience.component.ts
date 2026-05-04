@@ -28,26 +28,37 @@ export class ExperienceComponent {
 
   timeline = [
     {
-      date: "2022 – 2025",
+      date: "Nov 2025 – Present",
+      title: "Frontend Developer (Power Pages / Dataverse)",
+      subtitle: "Entelligence, Beirut",
+      type: "work",
+      details: [
+        "Building enterprise web portals using Microsoft Power Pages and Dataverse",
+        "Developing dynamic UI components with JavaScript, Liquid, and Azure Blob Storage",
+        "Working on React.js UI modules within the company's internal CRM-like platform",
+        "Translating Figma designs into responsive, pixel-perfect UI",
+      ],
+    },
+    {
+      date: "Sep 2022 – Aug 2025",
       title: "Software Engineer",
       subtitle: "Inmind.ai, Beirut",
       type: "work",
       details: [
-        "Built Angular/Vue apps with improved performance (+25%)",
-        "Implemented unit tests, increasing coverage by 40%",
-        "Collaborated across teams using Agile/Scrum",
-        "Earned AWS Cloud Practitioner certification",
+        "Developed scalable web apps using Angular, Vue, TypeScript, Tailwind, PrimeNg",
+        "Implemented automated unit and component testing in Vue.js",
+        "Collaborated with backend & UI/UX teams in Agile/Scrum (Azure DevOps)",
       ],
     },
     {
-      date: "2022 – 2023",
-      title: "Frontend Developer Intern",
+      date: "Jan 2022 – Sep 2022",
+      title: "Frontend Web Developer & UI/UX Designer Intern",
       subtitle: "Spexal Robotics, Beirut",
       type: "work",
       details: [
-        "Built React apps from Figma designs",
-        "Improved UI for robotics by 20% in task efficiency",
-        "Managed sprints using ClickUp",
+        "Built responsive web apps with React.js + Figma/Adobe XD designs",
+        "Designed and optimized user interfaces for logistics robotics",
+        "Managed sprints using ClickUp under Scrum methodology",
       ],
     },
     {
@@ -63,9 +74,9 @@ export class ExperienceComponent {
       subtitle: "Codi_Tech, Beirut",
       type: "edu",
       details: [
-        "Built 10+ full stack projects (React, Laravel)",
-        "Used Node, SQL, Git, Linux, WordPress",
-        "Applied Agile sprints using Trello",
+        "Built 10+ full stack projects (React, Laravel, Node.js)",
+        "Gained hands-on experience with SQL, Linux, and Git",
+        "Applied Scrum methodology, managing sprints in Trello",
       ],
     },
     {

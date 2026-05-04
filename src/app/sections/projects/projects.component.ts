@@ -37,6 +37,15 @@ export class ProjectsComponent {
 
   projects: Project[] = [
     {
+      title: "3D Escape Room",
+      description:
+        "An interactive 3D escape room browser game with orbit controls, 4 unique puzzles, inventory system, save/load, and cinematic UI.",
+      tech: ["React", "TypeScript", "Three.js", "Zustand", "Vite"],
+      link: "https://3-d-escape-room.vercel.app/",
+      repo: "https://github.com/RaniaIsmaeil/3D-escape-room",
+      image: "assets/images/escape-room.png",
+    },
+    {
       title: "Movies Hub (React)",
       description:
         "Search and browse movies with TMDB API, mobile‑first UI, live search, and caching.",
