@@ -6,12 +6,24 @@
   --ring: 0 0% 0%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
+#home {
+  scroll-margin-top: 5rem;
+}
+
 .container-p {
-  @apply max-w-6xl mx-auto px-4;
+  @apply max-w-6xl mx-auto px-5 sm:px-6 lg:px-8;
 }
 
 .card {
-  @apply rounded-2xl shadow-soft border border-zinc-200/60 dark:border-zinc-800/60 bg-white/70 dark:bg-zinc-900/60 backdrop-blur p-6;
+  @apply rounded-2xl border border-zinc-800 bg-zinc-900/60 backdrop-blur p-6;
 }
 
 .btn {
@@ -19,29 +31,41 @@
 }
 
 .btn-primary {
-  @apply btn bg-brand text-white hover:opacity-90;
+  @apply btn bg-blue-600 text-white hover:bg-blue-500;
 }
 
 .btn-outline {
-  @apply btn bg-transparent border-zinc-300 dark:border-zinc-700 hover:bg-zinc-100/60 dark:hover:bg-zinc-800/60;
+  @apply btn bg-transparent border-zinc-700 text-white hover:bg-zinc-800/60;
 }
 
 .chip {
-  @apply inline-flex items-center gap-1 rounded-full px-3 py-1 text-sm border border-zinc-300/70 dark:border-zinc-700/70;
+  @apply inline-flex items-center gap-1 rounded-full px-3 py-1 text-sm border border-zinc-700;
 }
 
 section {
-  @apply py-12 md:py-16;
+  @apply py-10 sm:py-12 md:py-16;
 }
 
 
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
   font-family: "Outfit", sans-serif;
+  background-color: #141419;
+  color: #fff;
 }
 section { scroll-margin-top: 80px; }
+
+/* Smooth hover glow for cards */
+.card {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  border-color: rgba(59, 130, 246, 0.3);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.05);
+}

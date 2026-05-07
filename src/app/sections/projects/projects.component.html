@@ -5,50 +5,61 @@
   (inView)="projectsIn = true"
   [@fadeUp]="projectsIn ? 'in' : 'out'"
 >
-  <h2 class="text-3xl font-bold text-center mb-2">
-    Featured <span class="text-brand">Projects</span> 
+  <h2 class="text-3xl font-bold text-center mb-2 text-white">
+    Featured <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Projects</span>
   </h2>
-  <p class="text-center text-zinc-600 dark:text-zinc-300 mb-10">
+  <p class="text-center text-zinc-400 mb-12">
     Here are some of my recent projects that showcase my skills in frontend
     development
   </p>
 
-  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div class="space-y-8">
     <article
       *ngFor="let p of projects; let i = index"
-      class="rounded-xl overflow-hidden shadow-md bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 transition hover:-translate-y-1 hover:shadow-lg"
-      [ngClass]="{
-        'hover:shadow-indigo-200 dark:hover:shadow-indigo-900/40':
-          i === projects.length - 1
-      }"
+      class="project-card group grid md:grid-cols-[1fr_1.2fr] gap-5 sm:gap-6 bg-zinc-600/20 border border-zinc-500/30 rounded-2xl p-4 sm:p-5 md:p-6 hover:bg-zinc-600/30 transition-all duration-300"
     >
-      <img [src]="p.image" [alt]="p.title" class="w-full h-40 object-cover" />
+      <!-- Image -->
+      <div class="overflow-hidden rounded-xl">
+        <img
+          [src]="p.image"
+          [alt]="p.title"
+          class="w-full h-44 sm:h-52 md:h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"
+        />
+      </div>
 
-      <div class="p-5">
-        <h3 class="text-lg font-semibold mb-1">{{ p.title }}</h3>
-        <p class="text-sm text-zinc-600 dark:text-zinc-300 mb-3">
+      <!-- Content -->
+      <div class="flex flex-col justify-center">
+        <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors">
+          {{ p.title }}
+        </h3>
+        <p class="text-sm text-zinc-300 mb-4 leading-relaxed">
           {{ p.description }}
         </p>
 
-        <div class="flex flex-wrap gap-2 mb-4">
-          <span *ngFor="let t of p.tech" class="chip text-xs">{{ t }}</span>
+        <div class="flex flex-wrap gap-2 mb-5">
+          <span
+            *ngFor="let t of p.tech"
+            class="px-2.5 py-1 text-xs rounded-md bg-blue-500/10 text-blue-300 border border-blue-500/20"
+          >{{ t }}</span>
         </div>
 
-        <div class="flex gap-2">
+        <div class="flex gap-3">
           <a
             *ngIf="p.link"
-            class="btn btn-primary text-sm px-3 py-1"
+            class="inline-flex items-center gap-1.5 text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-cyan-500 hover:opacity-90 px-4 py-2 rounded-lg transition-all duration-200"
             [href]="p.link"
             target="_blank"
-            >Live Demo</a
           >
+            <i class="pi pi-external-link text-xs"></i> Live Demo
+          </a>
           <a
             *ngIf="p.repo"
-            class="btn btn-outline text-sm px-3 py-1"
+            class="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-300 hover:text-white px-4 py-2 rounded-lg border border-zinc-600 hover:border-zinc-400 transition-all duration-200"
             [href]="p.repo"
             target="_blank"
-            >Code</a
           >
+            <i class="pi pi-github text-xs"></i> Code
+          </a>
         </div>
       </div>
     </article>

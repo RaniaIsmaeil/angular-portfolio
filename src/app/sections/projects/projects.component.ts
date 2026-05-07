@@ -8,6 +8,8 @@ import {
   style,
   transition,
   animate,
+  query,
+  stagger,
 } from "@angular/animations";
 
 type Project = {
@@ -26,9 +28,19 @@ type Project = {
   templateUrl: "./projects.component.html",
   animations: [
     trigger("fadeUp", [
-      state("out", style({ opacity: 0, transform: "translateY(12px)" })),
+      state("out", style({ opacity: 0, transform: "translateY(40px)" })),
       state("in", style({ opacity: 1, transform: "translateY(0)" })),
-      transition("out => in", animate("600ms cubic-bezier(.2,.8,.2,1)")),
+      transition("out => in", animate("700ms cubic-bezier(.2,.8,.2,1)")),
+    ]),
+    trigger("staggerCards", [
+      transition(":enter", [
+        query(".project-card", [
+          style({ opacity: 0, transform: "translateY(30px) scale(0.95)" }),
+          stagger("100ms", [
+            animate("600ms cubic-bezier(.2,.8,.2,1)", style({ opacity: 1, transform: "translateY(0) scale(1)" }))
+          ])
+        ], { optional: true })
+      ])
     ]),
   ],
 })

@@ -5,61 +5,51 @@
   (inView)="contactIn = true"
   [@fadeUp]="contactIn ? 'in' : 'out'"
 >
-  <h2 class="text-3xl font-bold text-center mb-2">
-    <span class="text-brand">Let's Connect</span>
+  <h2 class="text-3xl font-bold text-center mb-2 text-white">
+    Let's <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Connect</span>
   </h2>
-  <p class="text-center text-zinc-600 dark:text-zinc-300 mb-10">
+  <p class="text-center text-zinc-400 mb-10">
     Reach out for opportunities or just to say hi!
   </p>
 
-  <div class="card max-w-md mx-auto">
+  <div class="max-w-lg mx-auto grid gap-4">
     <!-- Email -->
     <div
-      class="flex items-center gap-3 p-3 rounded-lg bg-zinc-100 dark:bg-zinc-800 mb-3"
+      class="flex items-center gap-4 bg-zinc-600/20 border border-zinc-500/30 rounded-2xl p-5"
     >
-      <mat-icon class="text-blue-500">mail</mat-icon>
-      <span>ranyasmael&#64;gmail.com</span>
+      <span class="w-10 h-10 flex items-center justify-center rounded-lg bg-gradient-to-br from-blue-500/20 to-cyan-400/10">
+        <mat-icon class="text-cyan-400" style="font-size: 20px; width: 20px; height: 20px;">mail</mat-icon>
+      </span>
+      <div>
+        <p class="text-sm text-zinc-400">Email</p>
+        <p class="text-white">ranyasmael&#64;gmail.com</p>
+      </div>
+    </div>
+
+    <!-- Phone -->
+    <div
+      class="flex items-center gap-4 bg-zinc-600/20 border border-zinc-500/30 rounded-2xl p-5"
+    >
+      <span class="w-10 h-10 flex items-center justify-center rounded-lg bg-gradient-to-br from-blue-500/20 to-cyan-400/10">
+        <mat-icon class="text-cyan-400" style="font-size: 20px; width: 20px; height: 20px;">phone</mat-icon>
+      </span>
+      <div>
+        <p class="text-sm text-zinc-400">Phone</p>
+        <p class="text-white">+961 71 228 608</p>
+      </div>
     </div>
 
     <!-- Location -->
     <div
-      class="flex items-center gap-3 p-3 rounded-lg bg-zinc-100 dark:bg-zinc-800 mb-4"
+      class="flex items-center gap-4 bg-zinc-600/20 border border-zinc-500/30 rounded-2xl p-5"
     >
-      <mat-icon class="text-green-500">location_on</mat-icon>
-      <span>Beirut, Lebanon</span>
-    </div>
-
-    <hr class="my-4 border-zinc-300 dark:border-zinc-700" />
-
-    <!-- Social Icons -->
-    <div class="flex gap-3">
-      <a
-        href="https://github.com/RaniaIsmaeil"
-        target="_blank"
-        rel="noopener"
-        class="w-9 h-9 flex items-center justify-center rounded-md border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition"
-        aria-label="GitHub"
-      >
-        <i class="pi pi-github"></i>
-      </a>
-
-      <a
-        href="http://www.linkedin.com/in/raniaismaeil"
-        target="_blank"
-        rel="noopener"
-        class="w-9 h-9 flex items-center justify-center rounded-md border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition"
-        aria-label="LinkedIn"
-      >
-        <i class="pi pi-linkedin"></i>
-      </a>
-
-      <a
-        href="mailto:ranyasmael@gmail.com"
-        class="w-9 h-9 flex items-center justify-center rounded-md border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition"
-        aria-label="Email"
-      >
-        <i class="pi pi-envelope"></i>
-      </a>
+      <span class="w-10 h-10 flex items-center justify-center rounded-lg bg-gradient-to-br from-blue-500/20 to-cyan-400/10">
+        <mat-icon class="text-cyan-400" style="font-size: 20px; width: 20px; height: 20px;">location_on</mat-icon>
+      </span>
+      <div>
+        <p class="text-sm text-zinc-400">Location</p>
+        <p class="text-white">Beirut, Lebanon</p>
+      </div>
     </div>
   </div>
 </section>

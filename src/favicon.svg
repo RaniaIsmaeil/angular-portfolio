@@ -1,4 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="#6366F1"/>
-  <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="700" font-size="20" fill="white">R</text>
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#67e8f9"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="6" fill="#141419"/>
+  <text x="4" y="24" font-family="Arial,sans-serif" font-weight="bold" font-size="20" fill="white">R</text>
+  <text x="17" y="24" font-family="Arial,sans-serif" font-weight="bold" font-size="20" fill="url(#g)">I</text>
 </svg>
